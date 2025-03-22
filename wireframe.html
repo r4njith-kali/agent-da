@@ -1,0 +1,52 @@
+// UI Wireframe Structure for AI Data Scientist Agent
+// This mockup assumes a web-based interface using React + Tailwind + Streamlit (or Flask backend)
+
+export default function AIAgentUI() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white p-6">
+      <header className="text-3xl font-bold mb-6">AI Data Scientist Assistant</header>
+
+      {/* Chat Interface */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-2">🧠 Ask Anything</h2>
+        <div className="bg-gray-800 p-4 rounded-xl">
+          <p className="text-sm mb-2">Type your question or request, e.g., "Show me how long motor A has been running over 4 years"</p>
+          <textarea className="w-full p-3 rounded bg-gray-700 text-white" rows={4} placeholder="Your query here..." />
+          <button className="mt-2 px-4 py-2 bg-blue-600 rounded hover:bg-blue-500">Submit</button>
+        </div>
+      </section>
+
+      {/* Results Summary */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-2">📊 Summary</h2>
+        <div className="bg-gray-800 p-4 rounded-xl">
+          <p>"Torque appears to be a strong indicator of motor activity. Estimated runtime: 2340 hours over 4 years."</p>
+        </div>
+      </section>
+
+      {/* Visualizations */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-2">📈 Visual Evidence</h2>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-gray-800 p-4 rounded-xl">
+            <h3 className="font-semibold">Torque vs. Time</h3>
+            <div className="h-48 bg-gray-700 rounded mt-2 flex items-center justify-center">[Plot Placeholder]</div>
+          </div>
+          <div className="bg-gray-800 p-4 rounded-xl">
+            <h3 className="font-semibold">State_Run vs. Torque</h3>
+            <div className="h-48 bg-gray-700 rounded mt-2 flex items-center justify-center">[Plot Placeholder]</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Validation & Options */}
+      <section>
+        <h2 className="text-xl font-semibold mb-2">✅ Validate or Ask for Refinement</h2>
+        <div className="flex gap-4">
+          <button className="px-4 py-2 bg-green-600 rounded hover:bg-green-500">Looks Good</button>
+          <button className="px-4 py-2 bg-yellow-600 rounded hover:bg-yellow-500">Refine Further</button>
+        </div>
+      </section>
+    </div>
+  );
+}
