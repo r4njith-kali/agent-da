@@ -33,9 +33,67 @@ An intelligent, modular, and interactive **agentic software system** that assist
 
 ## Getting Started
 
+✅ CSV and Excel (.csv, .xlsx)
+
+✅ PostgreSQL (via credentials)
+
+🧪 Future: MongoDB, APIs, Snowflake, BigQuery
+
+
+📈 Example Use Case
+"I have a table in my PostgreSQL database with motor readings. I want to know how long each motor has been running over the past 4 years."
+
+The agent will:
+
+Connect to the database, pull the specified table
+
+Profile features like current, torque, state_run
+
+Identify the most reliable signal (e.g., torque) based on data quality
+
+Show a time-series plot of torque vs. time
+
+Estimate runtime by analyzing threshold-based operation periods
+
+Ask: “Should I proceed with torque as your runtime indicator?”
+
+Log all thoughts, suggestions, and alternatives in the notebook
+
+
+🧠 Agent System (MVP)
+Data Agent: Handles file uploads and database ingestion
+
+EDA Agent: Profiles the data and finds patterns
+
+Feature Agent: Ranks and explains useful features
+
+Controller: Orchestrates the flow and user interaction
+
+🚧 Roadmap
+ CSV/XLSX ingestion
+
+ PostgreSQL schema-aware ingestion
+
+ EDA agent with plots
+
+ Feature selector agent (mutual info, chi2)
+
+ Modeling agent (AutoML + interpretability)
+
+ Full UI with Copilot-style chat + notebook
+
+ Multi-user session support
+
+ Cloud deployment option
+
+
 ### Local Setup
 
 ```bash
 git clone https://github.com/your-username/ai-data-scientist.git
 cd ai-data-scientist
 pip install -r requirements.txt
+
+
+📜 License
+MIT License © 2025 Ranjith
